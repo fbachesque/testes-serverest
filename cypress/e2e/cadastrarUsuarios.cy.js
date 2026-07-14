@@ -1,8 +1,6 @@
 describe('Cadastro de Usuários', () => {
   beforeEach(() => {
-    cy.fixture('usuario').then((usuario) => {
-      cy.login(usuario.email, usuario.password)
-    })
+    cy.criarUsuarioELogar()
   })
 
   it('Não deve cadastrar um usuário administrador com o campo senha vazio', () => {

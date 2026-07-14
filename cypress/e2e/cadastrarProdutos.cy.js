@@ -1,8 +1,6 @@
 describe('Cadastro de Produtos', () => {
   beforeEach(() => {
-    cy.fixture('usuario').then((usuario) => {
-      cy.login(usuario.email, usuario.password)
-    })
+    cy.criarUsuarioELogar()
   })
 
   it('Cadastrar um novo produto com sucesso', () => {
